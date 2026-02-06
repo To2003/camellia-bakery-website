@@ -10,6 +10,10 @@ const _inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 export const metadata: Metadata = {
   title: 'Camellia | Tortas y Postres',
   description: 'Pasteleria artesanal con los mejores ingredientes. Tortas, cupcakes, cookies y mas. Pedidos por WhatsApp.',
+  icons: {
+    icon: '/icon.png', 
+    apple: '/icon.png', 
+  },
 }
 
 export const viewport: Viewport = {
