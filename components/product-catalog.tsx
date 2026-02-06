@@ -10,7 +10,7 @@ export function ProductCatalog() {
   const filtered =
     active === "Todos"
       ? products
-      : products.filter((p) => p.category === active)
+      : products.filter((product) => product.category === active)
 
   return (
     <section id="productos" className="mx-auto max-w-7xl px-6 py-24">
@@ -27,18 +27,18 @@ export function ProductCatalog() {
       </div>
 
       <div className="mt-10 flex flex-wrap justify-center gap-3">
-        {categories.map((cat) => (
+        {categories.map((category) => (
           <button
-            key={cat}
+            key={category}
             type="button"
-            onClick={() => setActive(cat)}
+            onClick={() => setActive(category)}
             className={`rounded-full px-6 py-2.5 text-sm font-medium transition-all ${
-              active === cat
+              active === category
                 ? "bg-primary text-primary-foreground shadow-md"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
             }`}
           >
-            {cat}
+            {category}
           </button>
         ))}
       </div>
