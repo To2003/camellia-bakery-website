@@ -16,12 +16,12 @@ async function getSanityProducts() {
     name,
     price,
     description,
-    category,
+    // La flecha -> significa "sigue el enlace y trae el dato 'name'"
+    "category": category->name, 
     image,
-    badge,
+    badge
   }`
 
-  
   return await client.fetch(query, {}, { next: { revalidate: 10 } })
 }
 

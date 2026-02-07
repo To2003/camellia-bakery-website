@@ -1,5 +1,18 @@
-// sanity/schema.ts
+// 1. Definimos qué es una "Categoría"
+const category = {
+  name: 'category',
+  title: 'Categorías',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      title: 'Nombre de la Categoría',
+      type: 'string',
+    }
+  ]
+}
 
+// 2. Definimos el "Producto" (actualizado)
 const product = {
   name: 'product',
   title: 'Productos',
@@ -30,26 +43,24 @@ const product = {
       name: 'image',
       title: 'Foto',
       type: 'image',
-      options: { hotspot: true }, // Permite recortar la imagen
+      options: { hotspot: true },
     },
+    // --- AQUÍ ESTÁ EL CAMBIO ---
     {
-        name: 'badge',
-        title: 'Etiqueta (Opcional)',
-        type: 'string'
+      name: 'category',
+      title: 'Categoría',
+      type: 'reference', // Ya no es 'string', ahora es una referencia
+      to: [{ type: 'category' }] // Apunta al documento de arriba
     },
+    // ---------------------------
     {
-        name: 'category',
-        title: 'Categoría',
-        type: 'string',
-        options: {
-            list: [
-                { title: 'Tortas', value: 'tortas' },
-                { title: 'Dulces', value: 'dulces' },
-                { title: 'Salado', value: 'salado' },
-            ]
-        }
+       name: 'badge',
+       title: 'Etiqueta (Opcional)',
+       type: 'string',
+       description: 'Ej: Nuevo, Sin TACC, Oferta'
     }
   ],
 }
 
-export const schemaTypes = [product]
+// Exportamos los dos tipos
+export const schemaTypes = [product, category]
