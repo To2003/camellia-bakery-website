@@ -68,6 +68,7 @@ This project demonstrates that I'm ready to:
 - ⚡ **Performance Optimized** - Lazy loading, code splitting, and image optimization
 - ♿ **Accessible** - WCAG compliance with semantic HTML
 - 📊 **Type-Safe** - Full TypeScript coverage for reliability
+- 🔁 **ISR-enabled Catalog** - The product catalog is backed by Sanity.io and uses Incremental Static Regeneration (ISR) so content edits in Sanity update the site almost in real-time without full redeploys.
 
 ---
 
@@ -84,6 +85,9 @@ This project demonstrates that I'm ready to:
 - **Lucide React** - Modern icon library (600+ icons)
 - **Next.js Themes** - Dark/Light mode implementation
 
+### Headless CMS
+- **Sanity.io (Headless CMS)** - Content and product management for the catalog and categories
+
 ### State Management & Forms
 - **React Context API** - Lightweight state management for cart
 - **React Hook Form** - Efficient form handling
@@ -93,6 +97,7 @@ This project demonstrates that I'm ready to:
 - **ESLint** - Code quality and consistency
 - **PostCSS & Autoprefixer** - CSS processing
 - **pnpm** - Fast, disk space efficient package manager
+- **Sanity.io (Headless CMS)**
 
 ### Deployment
 - **Vercel** - Optimized hosting for Next.js applications
@@ -133,6 +138,27 @@ This project demonstrates that I'm ready to:
    npm run build
    npm start
    ```
+
+---
+
+## ⚙️ Environment Variables / Configuración
+
+Add the following environment variables to .env.local (do not commit secrets):
+
+- NEXT_PUBLIC_SANITY_PROJECT_ID
+- NEXT_PUBLIC_SANITY_DATASET
+- NEXT_PUBLIC_SANITY_API_VERSION
+
+These variables are required for the Sanity client to fetch product and category data.
+
+---
+
+## 🔐 Admin Panel / Panel de Administración
+
+To manage products and categories locally, open the admin panel at:
+- /admin
+
+Log in with an authorized Sanity account to edit content. Changes made in Sanity will be reflected on the site via ISR.
 
 ---
 
@@ -293,6 +319,7 @@ npm run lint
 - ✅ CSS purging with Tailwind
 - ✅ Lazy loading for below-the-fold content
 - ✅ Server-Side Rendering (SSR)
+- ✅ Incremental Static Regeneration (ISR) for catalog updates via Sanity
 
 ---
 
@@ -440,6 +467,7 @@ Este proyecto demuestra que estoy capacitado para:
 - ⚡ **Optimizado** - Lazy loading, code splitting, optimización de imágenes
 - ♿ **Accesible** - Cumplimiento WCAG con HTML semántico
 - 📊 **Type-Safe** - Cobertura completa de TypeScript
+- 🔁 **Catálogo con ISR** - El catálogo está respaldado por Sanity.io y utiliza Incremental Static Regeneration (ISR), por lo que las ediciones en Sanity se actualizan casi en tiempo real sin necesidad de redeploy completo.
 
 ---
 
@@ -456,6 +484,9 @@ Este proyecto demuestra que estoy capacitado para:
 - **Lucide React** - Librería moderna de iconos (600+ iconos)
 - **Next.js Themes** - Implementación de modo oscuro/claro
 
+### Headless CMS
+- **Sanity.io (Headless CMS)** - Gestión de contenido y productos para catálogo y categorías
+
 ### Gestión de Estado y Formularios
 - **React Context API** - Gestión ligera de estado para carrito
 - **React Hook Form** - Manejo eficiente de formularios
@@ -465,6 +496,7 @@ Este proyecto demuestra que estoy capacitado para:
 - **ESLint** - Calidad y consistencia de código
 - **PostCSS & Autoprefixer** - Procesamiento de CSS
 - **pnpm** - Gestor de paquetes rápido y eficiente
+- **Sanity.io (Headless CMS)**
 
 ### Despliegue
 - **Vercel** - Hosting optimizado para aplicaciones Next.js
@@ -505,6 +537,27 @@ Este proyecto demuestra que estoy capacitado para:
    npm run build
    npm start
    ```
+
+---
+
+## ⚙️ Variables de Entorno / Configuración
+
+Añade las siguientes variables en .env.local (no subir claves reales al repositorio):
+
+- NEXT_PUBLIC_SANITY_PROJECT_ID
+- NEXT_PUBLIC_SANITY_DATASET
+- NEXT_PUBLIC_SANITY_API_VERSION
+
+Estas variables son necesarias para que el cliente de Sanity obtenga los datos de productos y categorías.
+
+---
+
+## 🔐 Panel de Administración
+
+Para gestionar productos y categorías localmente, abre el panel de administración en:
+- /admin
+
+Inicia sesión con una cuenta autorizada de Sanity para editar contenido. Los cambios realizados en Sanity se reflejan en el sitio mediante ISR.
 
 ---
 
@@ -665,6 +718,7 @@ npm run lint
 - ✅ Purga de CSS con Tailwind
 - ✅ Lazy loading para contenido debajo del fold
 - ✅ Server-Side Rendering (SSR)
+- ✅ Incremental Static Regeneration (ISR) para actualizaciones del catálogo a través de Sanity
 
 ---
 
